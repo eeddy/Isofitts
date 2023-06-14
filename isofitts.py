@@ -64,7 +64,7 @@ class FittsLawTest:
     def draw_circles(self):
         if not len(self.circles):
             self.angle = 0
-            self.angle_increment = 360 // self.num_of_circles
+            self.angle_increment = 360 / self.num_of_circles
             while self.angle < 360:
                 self.circles.append(pygame.Rect((self.width//2 - self.small_rad) + math.cos(math.radians(self.angle)) * self.big_rad, (self.height//2 - self.small_rad) + math.sin(math.radians(self.angle)) * self.big_rad, self.small_rad * 2, self.small_rad * 2))
                 self.angle += self.angle_increment
